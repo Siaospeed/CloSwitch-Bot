@@ -1,8 +1,5 @@
 #include <MiraiCP.hpp>
 
-#include <iostream>
-
-using namespace std;
 using namespace MiraiCP;
 
 const PluginConfig CPPPlugin::config
