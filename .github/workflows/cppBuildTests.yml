@@ -39,6 +39,6 @@ jobs:
       env: 
         cc: gcc
         cxx: g++
-      run: mkdir ./build && ,.make.sh
+      run: mkdir ./build && .make.sh
     - name: build with gcc
       run: mkdir ./build && ./make.sh
