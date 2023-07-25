@@ -18,16 +18,16 @@ jobs:
       env: 
         cc: gcc
         cxx: g++
-      run: mkdir ./build && cd ./build && cmake ..
+      run: mkdir ./build && ./make.sh
     - name: build with gcc
-      run: cd ./build && make MiraiCPPlugin
+      run: cd ./build && ./make.sh
   windows-msvc-single:
     runs-on: windows-latest
     steps:
     - name: checkout  
       uses: actions/checkout@v2
     - name: configure
-      run: mkdir ./build && cd ./build && cmake ..
+      run: mkdir ./build && ./make.sh
     - name: build with msvc
       run:  cmake --build build --config Debug --target MiraiCPPlugin
   windows-mingw:
@@ -39,6 +39,6 @@ jobs:
       env: 
         cc: gcc
         cxx: g++
-      run: mkdir ./build && cd ./build && cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" ..
+      run: mkdir ./build && ,.make.sh
     - name: build with gcc
-      run: cmake --build build --config Debug --target MiraiCPPlugin
+      run: mkdir ./build && ./make.sh
