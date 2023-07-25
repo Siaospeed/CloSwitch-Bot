@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.14)
 
 # C++ 标准：17+
-set(CMAKE_CXX_STANDARD 17) # 可以为20
+set(CMAKE_CXX_STANDARD 20) # 可以为20
 set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
@@ -10,7 +10,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(BUILD_USE_64BITS on)
 
 # 声明C++项目
-project(MIRAICP_TEMPLATE LANGUAGES CXX)
+project(STATUS LANGUAGES CXX)
 
 # 寻找库的头文件
 set(
@@ -26,7 +26,7 @@ set(
 file(GLOB PLUGIN_SOURCE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp)
 
 # 添加动态库编译目标
-set(MIRAICP_TARGET_NAME MiraiCPPlugin)
+set(MIRAICP_TARGET_NAME Status)
 add_library(
         ${MIRAICP_TARGET_NAME}
         SHARED
