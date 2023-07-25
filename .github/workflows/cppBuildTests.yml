@@ -42,5 +42,3 @@ jobs:
       run: mkdir ./build && .make.sh
     - name: build with gcc
       run: mkdir ./build && ./make.sh
-
-      
